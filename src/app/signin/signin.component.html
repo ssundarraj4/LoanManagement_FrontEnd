@@ -1,0 +1,32 @@
+<!-- <div style="text-align:center;"><br><br>
+<h1>Login</h1>
+<input type="text" placeholder="Enter UserId" class="form-control" #uname><br><br>
+<input type="password" placeholder="Enter Password" class="form-control" #pass><br><br>
+<button class="btn btn-primary" (click)="login(uname,pass)">SUBMIT</button>
+</div> -->
+
+<h2>{{title}}</h2>  
+  
+<form [formGroup]="form" #LoginInformation (ngSubmit)="isLogin(LoginInformation)">  
+  
+  <div class="row">  
+    <div class=" col-md-offset-1 col-md-4">  
+        <label for="userId"> UserId </label>  
+        <input formControlName="userId" class="form-control" type="text" required>   
+    </div>  
+  </div>  
+  
+  <div class="row">  
+    <div class=" col-md-offset-1 col-md-4">  
+        <label for="password"> Password </label>  
+        <input formControlName="password" class="form-control" type="password" required>   
+    </div>  
+  </div>  
+  
+  <div class="row" style="margin-top: 40px;">  
+    <div class="col-md-offset-1 col-md-4">  
+        <button class="btn btn-md btn-primary btn-style" [disabled]="form.invalid" >Login</button>  
+    </div>  
+  </div>  
+  
+</form>  

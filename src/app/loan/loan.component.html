@@ -1,0 +1,131 @@
+<div style="text-align:left;">
+    <table>
+        <h2>Account Information</h2>
+        <tr>
+
+            <td>
+                <label>Loan Amount</label>
+
+                <input type="text" placeholder="Loan Amount" class="form-control" [(ngModel)]='loanAmount'>
+            </td>
+            <td>
+                <label>Type Of Loan</label>
+
+                <select name="Type Of Loan" id="loan_type" [(ngModel)]='typeOfLoan'>
+                    <option value="personal loan">Personal Loan</option>
+                    <option value="auto loan">Auto Loan</option>
+                    <option value="gold loan">Gold Loan</option>
+                    <option value="education loan">Education Loan</option>
+                </select>
+            </td>
+            <td>
+                <label>Loan Term(in years)</label>
+
+                <input type="text" placeholder="Loan Term(in years)" class="form-control" [(ngModel)]='loanTerm'>
+            </td>
+        </tr><br>
+        <tr>
+            <td>
+                <label>Loan Handling Fees"</label>
+                <input type="text" placeholder="Loan Handling Fees" class="form-control" [(ngModel)]='loanFees'>
+            </td>
+            <td>
+                <label>Origination Account</label>
+                <input type="text" placeholder="Origination Account" class="form-control"
+                    [(ngModel)]='OriginationAccount'>
+            </td>
+            <td>
+                <label>Loan Status</label>
+                <select name="Loan Status" [(ngModel)]='loanStatus'>
+                    <option value="req">Requested</option>
+                    <option value=pro>Processing</option>
+                    <option value="app">Approved</option>
+                    <option value="rej">Rejected</option>
+                </select>
+            </td>
+        </tr><br>
+        <h2>Borrower Information</h2>
+        <tr>
+
+            <td>
+                <label>Applicant Business Name</label>
+                <input type="text" placeholder="Applicant Business Name" class="form-control"
+                    [(ngModel)]='appBusinessName'>
+            </td>
+            <td>
+                <label>Applikant Business Address</label>
+                <textarea id="appBusinessAddress" name="appBusinessAddress" rows="3" cols="25"
+                    placeholder="Applikant Business Address" class="form-control" [(ngModel)]='appBusinessAddress'>
+
+                    </textarea>
+            </td>
+            <td>
+                <label>Applicant Business Contact</label>
+                <input type="number" placeholder="Applicant Business Contact" class="form-control"
+                    [(ngModel)]='appBusinessContact'>
+            </td>
+        </tr><br>
+        <tr>
+            <td>
+                <label>Applicant Business Email</label>
+                <input type="email" placeholder="Applicant Business Email" class="form-control"
+                    [(ngModel)]='appBusinessEmail'>
+            </td>
+            <td>
+                <label>Applicant Business Ownership %</label>
+                <input type="text" placeholder="Applicant Business Ownership %" class="form-control"
+                    [(ngModel)]='appBusinessOwnership'>
+            </td>
+
+        </tr><br>
+
+        <h2>Property Information</h2>
+        <tr>
+            <td>
+                <label>Property_Name</label>
+                <input type="text" placeholder="Property_Name" class="form-control" [(ngModel)]='pname'>
+
+            </td>
+            <td>
+                <label>Property Address</label>
+                <input type="text" placeholder="Property Address" class="form-control" [(ngModel)]='paddress'>
+            </td>
+            <td>
+                <label>Type of Property</label>
+                <input type="text" placeholder="Type of Property" class="form-control" [(ngModel)]='ptype'>
+            </td>
+        </tr><br>
+        <tr>
+            <td>
+                <label>Property Size</label>
+                <input type="text" placeholder="Property Size" class="form-control" [(ngModel)]='psize'>
+
+            </td>
+        </tr><br>
+        <h2>Lein Information</h2>
+        <tr>
+            <td>
+                <label>Tax Account Number(TAN)</label>
+                <input type="text" placeholder="Tax Account Number(TAN)" class="form-control" [(ngModel)]='TAN'>
+
+            </td>
+            <td>
+                <label>Permanent Account Number(PAN)</label>
+                <input type="text" placeholder="Permanent Account Number(PAN)" class="form-control" [(ngModel)]='PAN'>
+
+            </td>
+            <td>
+                <label>Cibil Score</label>
+                <input type="number" placeholder="Cibil Score" class="form-control" [(ngModel)]='cibilScore'>
+            </td>
+        </tr>
+
+
+    </table>
+
+</div>
+
+
+
+<button class="btn btn-primary" (click)="loanRequest()">Submit</button>
+

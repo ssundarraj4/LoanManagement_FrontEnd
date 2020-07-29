@@ -1,0 +1,86 @@
+<h2>Loan Details</h2>
+
+<hr />
+<table>
+    <tr>
+        <td>
+            <label><b>Loan Amount </b></label> {{loans.loanAmount}}
+        </td>
+        <td>
+            <label><b>Loan Term </b></label> {{loans.loanTerm}}
+        </td>
+        <td>
+            <label><b>Loan Type </b></label> {{loans.loanType}}
+        </td>     
+
+    </tr><br>
+    <tr>
+        <td>
+            <label><b>Loan Handling Fees</b></label> {{loans.loanHandlingFees}}
+        </td>
+        <td>
+            <label><b>Origination Account</b></label> {{loans.originationAccount}}
+        </td>
+        <td>
+            <label><b>Loan Status </b></label> {{loans.status}}
+        </td>     
+
+    </tr><br>
+    <tr>
+        <td>
+            <label><b>Applicant Business Name</b></label> {{loans.applicantBusinessName}}
+        </td>
+        <td>
+            <label><b>Applicant Business Address</b></label> {{loans.applicantBusinessAddress}}
+        </td>
+        <td>
+            <label><b>Applicant Business contact </b></label> {{loans.applicantBusinesscontact}}
+        </td>     
+
+    </tr><br>
+    <tr>
+        <td>
+            <label><b>Applicant Business Email</b></label> {{loans.applicantBusinessEmail}}
+        </td>
+        <td>
+            <label><b>Applicant Business Ownership</b></label> {{loans.applicantBusinessOwnership}}
+        </td>
+            
+
+    </tr>
+    <br>
+    <tr>
+        <td>
+            <label><b>Property Name</b></label> {{loans.propertyName}}
+        </td>
+        <td>
+            <label><b>Property Address</b></label> {{loans.propertyAddress}}
+        </td>
+        <td>
+            <label><b>Type Of Property </b></label> {{loans.typeOfProperty}}
+        </td>     
+
+    </tr><br>
+    <tr>
+        <td>
+            <label><b>Property Size</b></label> {{loans.propertySize}}
+        </td>
+        </tr>
+        <br>
+    <tr>
+        <td>
+            <label><b>TAN</b></label> {{loans.tan}}
+        </td>
+        <td>
+            <label><b>PAN</b></label> {{loans.pan}}
+        </td>
+        <td>
+            <label><b>Cibil Score </b></label> {{loans.cibilScore}}
+        </td>     
+
+    </tr>
+</table>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Loan List</button><br>

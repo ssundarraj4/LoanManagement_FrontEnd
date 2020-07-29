@@ -1,0 +1,61 @@
+
+<h2>{{title}}</h2>
+
+<form [formGroup]="form" #AdminInformation (ngSubmit)="AdminForm(AdminInformation)">
+    
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="userId"> User Id </label>
+            <input formControlName="userId" class="form-control" type="text" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="firstName"> First Name </label>
+            <input formControlName="firstName" class="form-control" type="text" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="lastName"> Last Name </label>
+            <input formControlName="lastName" class="form-control" type="text" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="email"> Email </label>
+            <input formControlName="email" class="form-control" type="email" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="password"> Password </label>
+            <input formControlName="password" class="form-control" type="password" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="cpassword"> Confirm Password </label>
+            <input formControlName="cpassword" class="form-control" type="password" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-offset-1 col-md-4">
+            <label for="contact"> Contact </label>
+            <input formControlName="contact" class="form-control" type="number" required>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 40px;">
+        <div class="col-md-offset-1 col-md-4">
+            <button class="btn btn-md btn-primary btn-style" [disabled]="form.invalid">Save</button>
+        </div>
+    </div>
+
+</form>

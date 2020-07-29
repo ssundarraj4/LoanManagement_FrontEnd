@@ -1,0 +1,8 @@
+.footer{
+    flex-shrink: 0;
+    flex-grow: 0;
+    background:rgba(173, 200, 252, 0.877);
+    padding: 3px 15px;
+  
+  }
+  

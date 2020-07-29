@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+    <span><mat-icon>favorite</mat-icon>Finance</span>
+    <div class="spacer"></div>
+
+
+    <a mat-button routerLink="home">Home</a>
+    <a mat-button routerLink="loanSearch">Loan Search</a>
+    <a mat-button routerLink="loanRequest">Loan Request</a>
+    <a mat-button routerLink="profile">Profile</a>
+    <a mat-button routerLink="about">About Us</a>
+    <a mat-button routerLink="register">Register</a>
+    <a mat-raised-button *ngIf=status1 color='accent' routerLink="signin">Sign in</a>
+    <a mat-raised-button *ngIf=status color='accent' routerLink="signout">sign Out</a>
+
+</mat-toolbar>
