@@ -1,64 +1,143 @@
-<mat-grid-list cols="2" rowHeight="2:1">
+<div style="text-align:left;">
+    <h2>{{title}}</h2>
+    <table>
+        <h2>Account Information</h2>
+        <tr>
 
-    <mat-grid-tile>
+            <td>
+                <label>Loan Amount</label></td>
+            <td>
 
-        <div style="text-align:center;"><br><br>
-            <input type="text" placeholder="Loan Amount" class="form-control" [(ngModel)]='loans.loanAmount'><br><br>
-            <select name="Type Of Loan" id="loan_type" [(ngModel)]='loans.loanType'>
-                <option value="personal loan">Personal Loan</option>
-                <option value="auto loan">Auto Loan</option>
-                <option value="gold loan">Gold Loan</option>
-                <option value="education loan">Education Loan</option>
-            </select><br><br>
-            <input type="text" placeholder="Loan Term(in years)" class="form-control" [(ngModel)]='loans.loanTerm'><br><br>
-            <input type="text" placeholder="Loan Handling Fees" class="form-control" [(ngModel)]='loans.loanHandlingFees'><br><br>
-            <input type="text" placeholder="Origination Account" class="form-control"
-                [(ngModel)]='loans.originationAccount'><br><br>
+                <input type="text" placeholder="Loan Amount" class="form-control" [(ngModel)]='loans.loanAmount'>
+            </td>
+            <td>
+                <label>Type Of Loan</label></td>
+            <td>
 
-            <select name="Loan Status" [(ngModel)]='loans.status'>
-                <option value="req">Requested</option>
-                <option value=pro>Processing</option>
-                <option value="app">Approved</option>
-                <option value="rej">Rejected</option>
-            </select><br><br>
-        </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <div style="text-align:center;"><br><br>
-            <input type="text" placeholder="Applicant Business Name" class="form-control"
-                [(ngModel)]='loans.applicantBusinessName'><br><br>
-            <textarea id="appBusinessAddress" name="appBusinessAddress" rows="3" cols="25"
-                placeholder="Applikant Business Address" class="form-control" [(ngModel)]='loans.applicantBusinessAddress'>
+                <select name="Type Of Loan" id="loan_type" [(ngModel)]='loans.loanType'>
+                    <option value="personal loan">Personal Loan</option>
+                    <option value="auto loan">Auto Loan</option>
+                    <option value="gold loan">Gold Loan</option>
+                    <option value="education loan">Education Loan</option>
+                </select>
+            </td>
+            <td>
+                <label>Loan Term(in years)</label></td>
+            <td>
 
-                    </textarea><br><br>
-            <input type="number" placeholder="Applicant Business Contact" class="form-control"
-                [(ngModel)]='loans.applicantBusinesscontact'><br><br>
-            <input type="email" placeholder="Applicant Business Email" class="form-control"
-                [(ngModel)]='loans.applicantBusinessEmail'><br><br>
-            <input type="text" placeholder="Applicant Business Ownership %" class="form-control"
-                [(ngModel)]='loans.applicantBusinessOwnership'><br><br>
-        </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <div style="text-align:center;"><br><br>
-            <input type="text" placeholder="Property_Name" class="form-control" [(ngModel)]='loans.propertyName'><br><br>
-            <input type="text" placeholder="Property Address" class="form-control" [(ngModel)]='loans.propertyAddress'><br><br>
-            <input type="text" placeholder="Type of Property" class="form-control" [(ngModel)]='loans.typeOfProperty'><br><br>
-            <input type="text" placeholder="Property Size" class="form-control" [(ngModel)]='loans.propertySize'><br><br>
+                <input type="text" placeholder="Loan Term(in years)" class="form-control" [(ngModel)]='loans.loanTerm'>
+            </td>
+        </tr><br>
+        <tr>
+            <td>
+                <label>Loan Handling Fees"</label></td>
+            <td>
+                <input type="text" placeholder="Loan Handling Fees" class="form-control" [(ngModel)]='loans.loanHandlingFees'>
+            </td>
+            <td>
+                <label>Origination Account</label></td>
+            <td>
+                <input type="text" placeholder="Origination Account" class="form-control" [(ngModel)]='loans.originationAccount'>
+            </td>
+            <td>
+                <label>Loan Status</label></td>
+            <td>
+                <select name="Loan Status" [(ngModel)]='loans.status'>
+                    <option value="req">Requested</option>
+                    <option value=pro>Processing</option>
+                    <option value="app">Approved</option>
+                    <option value="rej">Rejected</option>
+                </select>
+            </td>
+        </tr><br>
+        <h2>Borrower Information</h2>
+        <tr>
 
-        </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
+            <td>
+                <label>Applicant Business Name</label></td>
+            <td>
+                <input type="text" placeholder="Applicant Business Name" class="form-control" [(ngModel)]='loans.applicantBusinessName'>
+            </td>
+            <td>
+                <label>Applikant Business Address</label></td>
+            <td>
+                <textarea id="appBusinessAddress" name="appBusinessAddress" rows="3" cols="25" placeholder="Applikant Business Address" class="form-control" [(ngModel)]='loans.applicantBusinessAddress'>
+
+                    </textarea>
+            </td>
+            <td>
+                <label>Applicant Business Contact</label></td>
+            <td>
+                <input type="number" placeholder="Applicant Business Contact" class="form-control" [(ngModel)]='loans.applicantBusinesscontact'>
+            </td>
+        </tr><br>
+        <tr>
+            <td>
+                <label>Applicant Business Email</label></td>
+            <td>
+                <input type="email" placeholder="Applicant Business Email" class="form-control" [(ngModel)]='loans.applicantBusinessEmail'>
+            </td>
+            <td>
+                <label>Applicant Business Ownership %</label></td>
+            <td>
+                <input type="text" placeholder="Applicant Business Ownership %" class="form-control" [(ngModel)]='loans.applicantBusinessOwnership'>
+            </td>
+
+        </tr><br>
+
+        <h2>Property Information</h2>
+        <tr>
+            <td>
+                <label>Property_Name</label></td>
+            <td>
+                <input type="text" placeholder="Property_Name" class="form-control" [(ngModel)]='loans.propertyName'>
+
+            </td>
+            <td>
+                <label>Property Address</label></td>
+            <td>
+                <input type="text" placeholder="Property Address" class="form-control" [(ngModel)]='loans.propertyAddress'>
+            </td>
+            <td>
+                <label>Type of Property</label></td>
+            <td>
+                <input type="text" placeholder="Type of Property" class="form-control" [(ngModel)]='loans.typeOfProperty'>
+            </td>
+        </tr><br>
+        <tr>
+            <td>
+                <label>Property Size</label></td>
+            <td>
+                <input type="text" placeholder="Property Size" class="form-control" [(ngModel)]='loans.propertySize'>
+
+            </td>
+        </tr><br>
+        <h2>Lein Information</h2>
+        <tr>
+            <td>
+                <label>Tax Account Number(TAN)</label></td>
+            <td>
+                <input type="text" placeholder="Tax Account Number(TAN)" class="form-control" [(ngModel)]='loans.tan'>
+
+            </td>
+            <td>
+                <label>Permanent Account Number(PAN)</label></td>
+            <td>
+                <input type="text" placeholder="Permanent Account Number(PAN)" class="form-control" [(ngModel)]='loans.pan'>
+
+            </td>
+            <td>
+                <label>Cibil Score</label></td>
+            <td>
+                <input type="number" placeholder="Cibil Score" class="form-control" [(ngModel)]='loans.cibilScore'>
+            </td>
+        </tr>
 
 
-        <div style="text-align:center;"><br><br>
-            <input type="text" placeholder="Tax Account Number(TAN)" class="form-control" [(ngModel)]='loans.tan'><br><br>
+    </table>
 
-            <input type="text" placeholder="Permanent Account Number(PAN)" class="form-control" [(ngModel)]='loans.pan'><br><br>
-            <input type="number" placeholder="Cibil Score" class="form-control" [(ngModel)]='loans.cibilScore'><br><br>
+</div>
 
 
-        </div>
-    </mat-grid-tile>
-</mat-grid-list>
-<button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+
+<button class="btn btn-primary" id="btnsubmit" (click)="onSubmit()">Submit</button>

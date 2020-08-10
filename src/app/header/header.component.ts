@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,8 +11,8 @@ export class HeaderComponent implements OnInit {
   status1: boolean = false;
 
 
-  constructor() {
-    if (localStorage.getItem('token') == "admin" || localStorage.getItem('token') == "test") {
+  constructor(private router:Router) {
+    if (sessionStorage.getItem('userId') === "admin" || sessionStorage.getItem('userId') === "test") {
       this.status = true;
 
     } else {
@@ -19,6 +20,11 @@ export class HeaderComponent implements OnInit {
 
     }
 
+  }
+  onClick(){
+    sessionStorage.removeItem('userId');
+    sessionStorage.removeItem('token');
+  this.router.navigate(['header']);
   }
 
 

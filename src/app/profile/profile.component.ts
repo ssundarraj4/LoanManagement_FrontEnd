@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../User';
 import { RegistrationService } from '../registration.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-profile',
@@ -10,16 +11,16 @@ import { RegistrationService } from '../registration.service';
 export class ProfileComponent implements OnInit {
   userId: string;
   user: User;
+  sub:Subscription;
   constructor(private regService: RegistrationService) { }
 
   ngOnInit() {
     this.user = new User();
     this.userId = sessionStorage.getItem('userId');
 
-    this.regService.getUser(this.userId).subscribe(data => {
+   this.sub= this.regService.getUser(this.userId).subscribe(data => {
       this.user = data;
-      console.log("1111111111111111111111111"+this.user);
-
+      
     });
 
   }

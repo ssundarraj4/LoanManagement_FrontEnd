@@ -3,13 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Loan } from './loan';
 import { Observable } from 'rxjs/internal/Observable';
+import { User } from './User';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoanService {
   Furl: string;
-
+  userId: string=sessionStorage.getItem('userId');;
   constructor(private http: HttpClient, private router: Router) { }
 
   public saveLoan(adminDetail: Loan): Observable<any> {
@@ -37,10 +38,16 @@ export class LoanService {
   getLoanList(): Observable<any> {
     return this.http.get(`http://localhost:8091/loanservice/api/v1/loan`);
   }
-  getLoanOfUser(userId:string):Observable<any>{
+  getLoanOfUser(userId: string): Observable<any> {
     this.Furl = "http://localhost:8091/loanservice/api/v1/loan/user/" + userId;
     console.log(this.Furl);
     return this.http.get(this.Furl)
 
   }
+  searchLoanOfUser(loanNo: number): Observable<any> {
+    
+    this.Furl = "http://localhost:8091/loanservice/api/v1/loan/" + this.userId + "/" + loanNo;
+    return this.http.get(this.Furl);
+  }
 }
+``

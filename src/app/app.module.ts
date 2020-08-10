@@ -22,6 +22,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoanSearchComponent } from './loan-search/loan-search.component';
 import { UpdateLoanComponent } from './update-loan/update-loan.component';
 import { ViewLoanComponent } from './view-loan/view-loan.component';
+import { MatSidenavModule} from '@angular/material/sidenav';
+import { MatListModule} from '@angular/material/list';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { HeadersComponent } from './headers/headers.component';
+import { LayoutModule } from '@angular/cdk/layout';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +40,8 @@ import { ViewLoanComponent } from './view-loan/view-loan.component';
     RegisterComponent,
     LoanSearchComponent,
     UpdateLoanComponent,
-    ViewLoanComponent
+    ViewLoanComponent,
+    HeadersComponent
 
   ],
   imports: [
@@ -48,8 +55,12 @@ import { ViewLoanComponent } from './view-loan/view-loan.component';
     MatInputModule,
     MatIconModule,
     MatFormFieldModule,
+    MatSidenavModule,
+    MatListModule,
+    FlexLayoutModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LayoutModule
   ],
 
   providers: [

@@ -18,6 +18,7 @@ export class Loan{
     pan:string;
     cibilScore:number;
     userId:string;
+    loanNo:number;
 
 
 }

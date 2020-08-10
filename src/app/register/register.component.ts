@@ -13,7 +13,7 @@ import { FormGroup, FormControl, Validators, FormsModule } from '@angular/forms'
 export class RegisterComponent implements OnInit {
 title:string='Signup Form';
   private adminDetail = new User();
-
+  rep:boolean;
   constructor(private adminService: RegistrationService, private router: Router) { }
 
   ngOnInit() {
@@ -46,8 +46,8 @@ title:string='Signup Form';
       this.adminService.authRegister(this.adminDetail).subscribe(
         response => {
           console.log("login registered successfully");
-          let rep = response;
-          if (rep === true) {
+        this.rep = response;
+          if (this.rep === true) {
             this.adminService.doRegister(this.adminDetail).subscribe();
             this.router.navigate(['./signin']);
             console.log("user profile registered successfully")

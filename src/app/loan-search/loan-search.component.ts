@@ -12,18 +12,27 @@ import { Router } from '@angular/router';
 export class LoanSearchComponent implements OnInit {
   loans: Observable<Loan[]>;
   searchItem: number;
+  title: string = 'Loan Details';
+  isenabled: boolean;
   constructor(private loanService: LoanService, private router: Router) { }
 
   ngOnInit() {
-
+    if (sessionStorage.getItem('userId') === 'admin') {
+      this.isenabled = true;
+    }
     this.reloadData();
 
   }
 
   search() {
-    this.loans = this.loanService.searchLoan(this.searchItem);
+    if (sessionStorage.getItem('userId') === "admin") {
+      this.loans = this.loanService.searchLoan(this.searchItem);
 
+    }
+    else {
+      this.loans = this.loanService.searchLoanOfUser(this.searchItem)
 
+    }
   }
   deleteLoan(loanNo: number) {
     this.loanService.deleteLoan(loanNo)
@@ -52,5 +61,5 @@ export class LoanSearchComponent implements OnInit {
     }
 
   }
- 
+
 }

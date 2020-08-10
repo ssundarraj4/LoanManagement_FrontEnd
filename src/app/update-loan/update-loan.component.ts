@@ -11,6 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class UpdateLoanComponent implements OnInit {
   loanNo: number;
   loans: Loan;
+  title:string="Update Loan";
   constructor(private router: Router, private route: ActivatedRoute, private loanService: LoanService) { }
 
 

@@ -11,6 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./loan.component.css']
 })
 export class LoanComponent implements OnInit {
+  title:string="Request New Loan";
   private loan = new Loan();
   loanAmount: number;
   typeOfLoan: string;

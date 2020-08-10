@@ -1,0 +1,46 @@
+h2{
+    background-color: indianred;
+    font-weight: bold;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  td:nth-child(even){background-color:lightsteelblue}
+  tr:nth-child(even){background-color:lightgray}
+  label{
+    font-weight: bold;
+  }
+  
+   button {
+    font-weight: bold;
+    color: rgb(19, 12, 12);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    
+  } 
+
+  
+  
+  input {
+    width: 100%;
+    padding: 6px 3px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  
+     
+  
+ 

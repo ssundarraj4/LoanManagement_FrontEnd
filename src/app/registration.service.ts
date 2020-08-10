@@ -44,7 +44,7 @@ export class RegistrationService {
     this.rurl = 'http://localhost:8091/userprofileservice/api/v1/userprofile/' + userId;
     return this.http.get(this.rurl);
   }
-  updateUser(userId: string, emp: any): Observable<any> {
+  updateUser(userId: string, emp: any): Observable<any> { this.rurl = 'http://localhost:8091/userprofileservice/api/v1/userprofile/' + userId;
     this.rurl = 'http://localhost:8091/userprofileservice/api/v1/userprofile/' + userId;
     return this.http.put(this.rurl, emp);
   }

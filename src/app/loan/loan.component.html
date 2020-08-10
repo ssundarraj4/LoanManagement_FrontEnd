@@ -1,17 +1,21 @@
+<h2 style="text-align: center;">{{title}}</h2>
 <div style="text-align:left;">
+
     <table>
         <h2>Account Information</h2>
         <tr>
 
             <td>
-                <label>Loan Amount</label>
+                <label>Loan Amount</label></td>
+            <td>
 
-                <input type="text" placeholder="Loan Amount" class="form-control" [(ngModel)]='loanAmount'>
+                <input type="text" placeholder="Loan Amount" class="form-control" [(ngModel)]='loanAmount' required>
             </td>
             <td>
-                <label>Type Of Loan</label>
+                <label>Type Of Loan</label></td>
+            <td>
 
-                <select name="Type Of Loan" id="loan_type" [(ngModel)]='typeOfLoan'>
+                <select name="Type Of Loan" id="loan_type" [(ngModel)]='typeOfLoan' required>
                     <option value="personal loan">Personal Loan</option>
                     <option value="auto loan">Auto Loan</option>
                     <option value="gold loan">Gold Loan</option>
@@ -19,24 +23,27 @@
                 </select>
             </td>
             <td>
-                <label>Loan Term(in years)</label>
+                <label>Loan Term(in years)</label></td>
+            <td>
 
-                <input type="text" placeholder="Loan Term(in years)" class="form-control" [(ngModel)]='loanTerm'>
+                <input type="text" placeholder="Loan Term(in years)" class="form-control" [(ngModel)]='loanTerm' required>
             </td>
         </tr><br>
         <tr>
             <td>
-                <label>Loan Handling Fees"</label>
-                <input type="text" placeholder="Loan Handling Fees" class="form-control" [(ngModel)]='loanFees'>
+                <label>Loan Handling Fees"</label></td>
+            <td>
+                <input type="text" placeholder="Loan Handling Fees" class="form-control" [(ngModel)]='loanFees' required>
             </td>
             <td>
-                <label>Origination Account</label>
-                <input type="text" placeholder="Origination Account" class="form-control"
-                    [(ngModel)]='OriginationAccount'>
+                <label>Origination Account</label></td>
+            <td>
+                <input type="number" placeholder="Origination Account" class="form-control" [(ngModel)]='OriginationAccount' required>
             </td>
             <td>
-                <label>Loan Status</label>
-                <select name="Loan Status" [(ngModel)]='loanStatus'>
+                <label>Loan Status</label></td>
+            <td>
+                <select name="Loan Status" [(ngModel)]='loanStatus' required>
                     <option value="req">Requested</option>
                     <option value=pro>Processing</option>
                     <option value="app">Approved</option>
@@ -48,33 +55,33 @@
         <tr>
 
             <td>
-                <label>Applicant Business Name</label>
-                <input type="text" placeholder="Applicant Business Name" class="form-control"
-                    [(ngModel)]='appBusinessName'>
+                <label>Applicant Business Name</label></td>
+            <td>
+                <input type="text" placeholder="Applicant Business Name" class="form-control" [(ngModel)]='appBusinessName'>
             </td>
             <td>
-                <label>Applikant Business Address</label>
-                <textarea id="appBusinessAddress" name="appBusinessAddress" rows="3" cols="25"
-                    placeholder="Applikant Business Address" class="form-control" [(ngModel)]='appBusinessAddress'>
+                <label>Applikant Business Address</label></td>
+            <td>
+                <textarea id="appBusinessAddress" name="appBusinessAddress" rows="3" cols="25" placeholder="Applikant Business Address" class="form-control" [(ngModel)]='appBusinessAddress'>
 
                     </textarea>
             </td>
             <td>
-                <label>Applicant Business Contact</label>
-                <input type="number" placeholder="Applicant Business Contact" class="form-control"
-                    [(ngModel)]='appBusinessContact'>
+                <label>Applicant Business Contact</label></td>
+            <td>
+                <input type="number" placeholder="Applicant Business Contact" class="form-control" [(ngModel)]='appBusinessContact'>
             </td>
         </tr><br>
         <tr>
             <td>
-                <label>Applicant Business Email</label>
-                <input type="email" placeholder="Applicant Business Email" class="form-control"
-                    [(ngModel)]='appBusinessEmail'>
+                <label>Applicant Business Email</label></td>
+            <td>
+                <input type="email" placeholder="Applicant Business Email" class="form-control" [(ngModel)]='appBusinessEmail'>
             </td>
             <td>
-                <label>Applicant Business Ownership %</label>
-                <input type="text" placeholder="Applicant Business Ownership %" class="form-control"
-                    [(ngModel)]='appBusinessOwnership'>
+                <label>Applicant Business Ownership %</label></td>
+            <td>
+                <input type="text" placeholder="Applicant Business Ownership %" class="form-control" [(ngModel)]='appBusinessOwnership'>
             </td>
 
         </tr><br>
@@ -82,22 +89,26 @@
         <h2>Property Information</h2>
         <tr>
             <td>
-                <label>Property_Name</label>
+                <label>Property_Name</label></td>
+            <td>
                 <input type="text" placeholder="Property_Name" class="form-control" [(ngModel)]='pname'>
 
             </td>
             <td>
-                <label>Property Address</label>
+                <label>Property Address</label></td>
+            <td>
                 <input type="text" placeholder="Property Address" class="form-control" [(ngModel)]='paddress'>
             </td>
             <td>
-                <label>Type of Property</label>
+                <label>Type of Property</label></td>
+            <td>
                 <input type="text" placeholder="Type of Property" class="form-control" [(ngModel)]='ptype'>
             </td>
         </tr><br>
         <tr>
             <td>
-                <label>Property Size</label>
+                <label>Property Size</label></td>
+            <td>
                 <input type="text" placeholder="Property Size" class="form-control" [(ngModel)]='psize'>
 
             </td>
@@ -105,17 +116,20 @@
         <h2>Lein Information</h2>
         <tr>
             <td>
-                <label>Tax Account Number(TAN)</label>
+                <label>Tax Account Number(TAN)</label></td>
+            <td>
                 <input type="text" placeholder="Tax Account Number(TAN)" class="form-control" [(ngModel)]='TAN'>
 
             </td>
             <td>
-                <label>Permanent Account Number(PAN)</label>
+                <label>Permanent Account Number(PAN)</label></td>
+            <td>
                 <input type="text" placeholder="Permanent Account Number(PAN)" class="form-control" [(ngModel)]='PAN'>
 
             </td>
             <td>
-                <label>Cibil Score</label>
+                <label>Cibil Score</label></td>
+            <td>
                 <input type="number" placeholder="Cibil Score" class="form-control" [(ngModel)]='cibilScore'>
             </td>
         </tr>
@@ -127,5 +141,4 @@
 
 
 
-<button class="btn btn-primary" (click)="loanRequest()">Submit</button>
-
+<button class="btn btn-primary" id="btnLoanRequest" (click)="loanRequest()">Submit</button>

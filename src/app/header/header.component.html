@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" class="mat-elevation-z8">
+ <mat-toolbar color="primary" class="mat-elevation-z8">
     <span><mat-icon>favorite</mat-icon>Finance</span>
     <div class="spacer"></div>
 
@@ -10,6 +10,86 @@
     <a mat-button routerLink="about">About Us</a>
     <a mat-button routerLink="register">Register</a>
     <a mat-raised-button *ngIf=status1 color='accent' routerLink="signin">Sign in</a>
-    <a mat-raised-button *ngIf=status color='accent' routerLink="signout">sign Out</a>
+    <a mat-raised-button (click)="onClick()" *ngIf=status color='accent' routerLink="signout">sign Out</a>
 
 </mat-toolbar>
+
+
+___________________________________ 
+<!-- 
+<div style="height: 100vh;">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+         <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button> 
+        <span><mat-icon>favorite</mat-icon>Finance</span>
+        <span class="menu-spacer"></span>
+        <div fxShow="true" fxHide.lt-md="true">
+            <a mat-button routerLink="home">Home</a>
+            <a mat-button routerLink="loanSearch">Loan Search</a>
+            <a mat-button routerLink="loanRequest">Loan Request</a>
+            <a mat-button routerLink="profile">Profile</a>
+            <a mat-button routerLink="about">About Us</a>
+            <a mat-button routerLink="register">Register</a>
+            <a mat-raised-button *ngIf=status1 color='accent' routerLink="signin">Sign in</a>
+            <a mat-raised-button (click)="onClick()" *ngIf=status color='accent' routerLink="signout">sign Out</a>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  
+   <mat-sidenav-container fxFlexFill>
+      <mat-sidenav #sidenav>
+        <mat-nav-list>
+            <a mat-list-item routerLink="home">Home</a>
+            <a mat-list-item routerLink="loanSearch">Loan Search</a>
+            <a mat-list-item routerLink="loanRequest">Loan Request</a>
+            <a mat-list-item routerLink="profile">Profile</a>
+            <a mat-list-item routerLink="about">About Us</a>
+            <a mat-list-item routerLink="register">Register</a>
+            <a mat-list-item *ngIf=status1 color='accent' routerLink="signin">Sign in</a>
+            <a mat-list-item (click)="onClick()" *ngIf=status color='accent' routerLink="signout">sign Out</a>
+        </mat-nav-list>
+      </mat-sidenav>
+     
+    </mat-sidenav-container>
+  </div>  -->
+ <!-- 
+  <div> 
+    <mat-toolbar color="primary">
+      <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+  
+      <a mat-button class="companyName" routerLink="/">
+        <span>Site name</span>
+      </a>
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <a mat-button routerLink="home">Home</a>
+        <a mat-button routerLink="loanSearch">Loan Search</a>
+        <a mat-button routerLink="loanRequest">Loan Request</a>
+        <a mat-button routerLink="/offer">Offer</a>
+        <a mat-button routerLink="/contact">Contact</a>
+      </div>
+  
+    </mat-toolbar>
+    <mat-sidenav-container fxFlexFill class="example-container">
+  
+      <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
+        <div fxLayout="column">
+          <a mat-button routerLink="home">Home</a>
+          <a mat-button routerLink="loanSearch">Loan Search</a>
+          <a mat-button routerLink="loanRequest">Loan Request</a>
+          <a mat-button routerLink="/offer">Offer</a>
+          <a mat-button routerLink="/contact">Contact</a>
+        </div>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill>
+        Awesome content
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+  -->

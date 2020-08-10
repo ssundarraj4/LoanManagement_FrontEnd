@@ -1,13 +1,22 @@
-<div class="panel panel-primary">
+<div id="d1" class="panel panel-primary">
     <div class="panel-heading">
-        <h2>Loan Details</h2>
+        <h2>{{title}}</h2>
     </div>
-    <div>
-        <input type="number" placeholder="Enter loan number" [(ngModel)]='searchItem'>
-        <button btn btn-primary (click)="search()">search</button>
-    </div>
+
     <div class="panel-body">
+        <table>
+            <tr>
+                <td>
+                    <input type="number" placeholder="Enter loan number" [(ngModel)]='searchItem'>
+                </td>
+                <td><button btn btn-primary id="btnSearch" name="searchbutton" (click)="search()">search</button>
+
+                </td>
+            </tr>
+        </table>
         <table class="table table-striped">
+
+
             <thead>
                 <tr>
                     <th>Loan No</th>
@@ -22,17 +31,17 @@
                     <td>{{loan.loanNo}}</td>
                     <td>{{loan.loanAmount}}</td>
                     <td>{{loan.loanTerm}}</td>
-                    <td>{{loan.loanType}}</td>                   
+                    <td>{{loan.loanType}}</td>
                     <td>{{loan.status}}</td>
-                    <td><button (click)="deleteLoan(loan.loanNo)" class="btn btn-danger">Delete</button>
-                        <button (click)="updateLoan(loan.loanNo)" class="btn btn-info"
-                            style="margin-left: 10px">Update</button>
-                        <button (click)="loanDetails(loan.loanNo)" class="btn btn-info"
-                            style="margin-left: 10px">Details</button>
+                    <td><button (click)="deleteLoan(loan.loanNo)" [disabled]=!isenabled class="btn btn-danger">Delete</button></td>
+                    <td>
+                        <button (click)="updateLoan(loan.loanNo)" id="btnupdate" [disabled]=!isenabled class="btn btn-info" style="margin-left: 10px">Update</button></td>
+                    <td>
+                        <button (click)="loanDetails(loan.loanNo)" id="btnview" class="btn btn-info" style="margin-left: 10px">Details</button>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-   
+
 </div>

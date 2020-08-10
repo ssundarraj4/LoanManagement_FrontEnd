@@ -36,8 +36,10 @@ export class SigninComponent implements OnInit {
     
     this.adminService.login(this.mlogin).subscribe(
       data => {
-        this.router.navigate(['./home']);
+       
         this.invalidLogin = false;
+        
+        this.router.navigate(['./home']);
       },
       error => {
         alert("incorrect user id and password");
