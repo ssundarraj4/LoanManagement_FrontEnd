@@ -1,7 +1,7 @@
 applications:
-- name: Loan-Management
+- name: LoanManagement
   memory: 512M
-  disk_quota: 1024M
+  path: dist/Loan-Management
+  random-route: false
   instances: 1
-  buildpack: staticfile_buildpack
-  domain: cfapps.io
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack

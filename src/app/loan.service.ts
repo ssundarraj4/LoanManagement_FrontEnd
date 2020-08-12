@@ -10,44 +10,61 @@ import { User } from './User';
 })
 export class LoanService {
   Furl: string;
-  userId: string=sessionStorage.getItem('userId');;
+  userId: string = sessionStorage.getItem('userId');
+  tok: string = sessionStorage.getItem('token');
   constructor(private http: HttpClient, private router: Router) { }
 
   public saveLoan(adminDetail: Loan): Observable<any> {
-    return this.http.post("http://localhost:8091/loanservice/api/v1/loan", adminDetail);
+    const headers = { 'content-type': 'application/json', 'authorization': this.tok }
+
+    return this.http.post("https://loanappzuulapigateway.cfapps.io/loanservice/api/v1/loan", adminDetail, { 'headers': headers });
   }
 
   public deleteLoan(loanNo: number): Observable<any> {
-    this.Furl = "http://localhost:8091/loanservice/api/v1/loan/" + loanNo;
-    return this.http.delete(this.Furl, { responseType: 'text' });
+    const headers = { 'content-type': 'application/json', 'authorization': this.tok }
+
+    this.Furl = "https://loanappzuulapigateway.cfapps.io/loanservice/api/v1/loan/" + loanNo;
+    return this.http.delete(this.Furl, { responseType: 'text', 'headers': headers });
   }
 
   public updateLoan(loanNo: number, data: any): Observable<object> {
-    this.Furl = "http://localhost:8091/loanservice/api/v1/loan/" + loanNo;
-    return this.http.put(this.Furl, data);
+    const headers = { 'content-type': 'application/json', 'authorization': this.tok }
+
+    this.Furl = "https://loanappzuulapigateway.cfapps.io/loanservice/api/v1/loan/" + loanNo;
+    return this.http.put(this.Furl, data, { 'headers': headers });
   }
   public viewLoan(loanNo: number): Observable<any> {
-    this.Furl = "http://localhost:8091/loanservice/api/v1/loan/" + loanNo;
-    return this.http.get(this.Furl);
+    const headers = { 'content-type': 'application/json', 'authorization': this.tok }
+
+    this.Furl = "https://loanappzuulapigateway.cfapps.io/loanservice/api/v1/loan/" + loanNo;
+    return this.http.get(this.Furl, { 'headers': headers });
   }
   public searchLoan(loanNo: number): Observable<any> {
-    this.Furl = "http://localhost:8091/loanservice/api/v1/loan/search/" + loanNo;
-    return this.http.get(this.Furl);
+    const headers = { 'content-type': 'application/json', 'authorization': this.tok }
+
+    this.Furl = "https://loanappzuulapigateway.cfapps.io/loanservice/api/v1/loan/search/" + loanNo;
+    return this.http.get(this.Furl, { 'headers': headers });
   }
 
   getLoanList(): Observable<any> {
-    return this.http.get(`http://localhost:8091/loanservice/api/v1/loan`);
+    const headers = { 'content-type': 'application/json', 'authorization': this.tok }
+
+    return this.http.get(`https://loanappzuulapigateway.cfapps.io/loanservice/api/v1/loan`, { 'headers': headers });
   }
   getLoanOfUser(userId: string): Observable<any> {
-    this.Furl = "http://localhost:8091/loanservice/api/v1/loan/user/" + userId;
-    console.log(this.Furl);
-    return this.http.get(this.Furl)
+    const headers = { 'content-type': 'application/json', 'authorization': this.tok }
+
+    this.Furl = "https://loanappzuulapigateway.cfapps.io/loanservice/api/v1/loan/user/" + userId;
+
+    return this.http.get(this.Furl, { 'headers': headers })
 
   }
   searchLoanOfUser(loanNo: number): Observable<any> {
-    
-    this.Furl = "http://localhost:8091/loanservice/api/v1/loan/" + this.userId + "/" + loanNo;
-    return this.http.get(this.Furl);
+    const headers = { 'content-type': 'application/json', 'authorization': this.tok }
+
+
+    this.Furl = "https://loanappzuulapigateway.cfapps.io/loanservice/api/v1/loan/" + this.userId + "/" + loanNo;
+    return this.http.get(this.Furl, { 'headers': headers });
   }
 }
 ``
